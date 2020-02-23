@@ -12,7 +12,7 @@ class Solution {
                 return result;
             }
             else
-                map.put(nums[i],i);
+                map.put(nums[i], i);
         }
         return result;
     }
