@@ -1,4 +1,4 @@
-package songren;
+package songren.LinkedList;
 
 public class LC160_IntersectionOfTwoLinkedLists {
     /**
