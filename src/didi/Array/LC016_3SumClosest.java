@@ -3,7 +3,7 @@ package didi;
 class Solution {
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
-        int result = nums[0]+nums[1]+nums[2], sum; // bug 1 cannot use Integer.MAX_VALUE (overflow)
+        int result = nums[0]+nums[1]+nums[2], sum; // bug 1 Integer.MAX_VALUE set to diff
         for (int i = 0; i < nums.length-2; i++){
             int left = i+1, right = nums.length-1;
             while (left < right){
