@@ -7,7 +7,7 @@ class Solution {
         return x == reverse(x);
     }
 
-    public int reverse(int num){
+    public int reverse(int num) {
         int rst = 0;
 
         while (num != 0) {
