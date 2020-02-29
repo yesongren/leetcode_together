@@ -1,5 +1,4 @@
 package didi.HashTable;
-import java.util.*;
 
 class Solution {
     // Deal with unique use HashSet
