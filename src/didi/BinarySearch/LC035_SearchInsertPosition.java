@@ -1,1 +1,1 @@
-package didi.BinarySearch;
+package didi.BinarySearch
