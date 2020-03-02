@@ -2,6 +2,7 @@ package songren.BinarySearch;
 
 /**
  * Created by yesongren on 2020/3/3
+ * 50. Pow(x, n)
  */
 public class LC050_Power_x_n {
     public double divideCleanSolution(double x, long n) {
