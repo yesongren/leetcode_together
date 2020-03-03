@@ -19,7 +19,7 @@ class Solution {
         while (!queue.isEmpty()) {
             int n = queue.size();
             for (int i = 0; i < n; i++) {
-                TreeNode curr = queue.poll();
+                TreeNode curr = queue.poll(); // inside for loop
                 if (curr.left == null && curr.right == null)
                     return result;
                 if (curr.left != null)
