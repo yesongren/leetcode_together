@@ -7,12 +7,16 @@ import java.util.Stack;
  * 155. Min Stack
  */
 public class LC155_MinStack {
+
+}
+
+class MinStack {
     int[] arr;
     int index;
     int min;
     int size = 10;
 
-    public void MinStack() {
+    public MinStack() {
         arr = new int[size];
         index = -1;
     }
