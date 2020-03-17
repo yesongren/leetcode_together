@@ -91,4 +91,23 @@ public class LC347_TopKFrequentElements {
         }
         return result;
     }
+
+    /**
+     * 0. trivial solution
+     */
+    public List<Integer> topKFrequent(int[] nums, int k) {
+        Map<Integer, Integer> freqMap = new HashMap<>();
+        for (int num : nums) {
+            int freq = freqMap.getOrDefault(num, 0);
+            freqMap.put(num, freq + 1);
+        }
+
+        List<Map.Entry<Integer, Integer>> list = new ArrayList<>(freqMap.entrySet());
+        list.sort(Comparator.comparing(Map.Entry::getValue));
+        Collections.reverse(list);
+        List<Map.Entry<Integer, Integer>> newList = list.subList(0, k);
+        List<Integer> res = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> e : newList) res.add(e.getKey());
+        return res;
+    }
 }
