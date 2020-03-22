@@ -8,8 +8,7 @@ class Solution {
         int mostFreq = 0;
 
         for (int right = 0; right < s.length(); right++) {
-            char c = s.charAt(right);
-            mostFreq = Math.max(mostFreq, ++freq[c - 'A']);
+            mostFreq = Math.max(mostFreq, ++freq[.charAt(right) - 'A']);
             int replace = right - left + 1 - mostFreq;
             if (replace > k) {
                 freq[s.charAt(left) - 'A']--;
