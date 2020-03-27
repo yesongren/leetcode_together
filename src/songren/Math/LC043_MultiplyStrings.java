@@ -1,4 +1,4 @@
-package songren.Math;
+mpackage songren.Math;
 
 import java.util.Arrays;
 
