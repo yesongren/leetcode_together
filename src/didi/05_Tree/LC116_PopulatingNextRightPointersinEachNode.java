@@ -23,7 +23,7 @@ class Node {
 };
 */
 class Solution {
-    public Node connect(Node root) {
+    public Node connect1(Node root) {
         if (root == null || root.left == null) return root;
 
         root.left.next = root.right;
@@ -32,6 +32,22 @@ class Solution {
 
         connect(root.left);
         connect(root.right);
+
+        return root;
+    }
+
+    public Node connect(Node root) {
+        Node start = root;
+
+        while(start != null){
+            Node curr = start;
+            while(curr != null){
+                if(curr.left != null) curr.left.next = curr.right;
+                if(curr.right != null && curr.next != null) curr.right.next = curr.next.left;
+                curr = curr.next;
+            }
+            start = start.left;
+        }
 
         return root;
     }
