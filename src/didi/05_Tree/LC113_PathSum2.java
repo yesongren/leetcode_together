@@ -23,12 +23,10 @@ class Solution {
 
         sum -= root.val;
 
-        if (root.left == null && root.right == null) {
-            if (sum == 0) {
-                path.add(root.val);
-                res.add(new ArrayList<>(path));
-                path.remove(path.size() - 1);
-            }
+        if (root.left == null && root.right == null && sum == 0) {
+            path.add(root.val);
+            res.add(new ArrayList<>(path));
+            path.remove(path.size() - 1);
             return;
         }
 
