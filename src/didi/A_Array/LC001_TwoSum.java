@@ -1,6 +1,8 @@
-package didi;
+package src.didi.A_Array;
 
-class Solution {
+import java.util.HashMap;
+
+class LC001_Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer,Integer> map = new HashMap<>();
         int[] result = new int[2];
