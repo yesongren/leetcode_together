@@ -3,10 +3,11 @@ package src.didi.F_HashTable;
 import java.util.HashSet;
 import java.util.Set;
 
-class LC202_Solution {
+class LC202_HappyNumber {
     public boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>();
         set.add(n);
+
         while (n != 1) {
             n = change(n);
             if (set.contains(n)) return false;
