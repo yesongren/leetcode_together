@@ -16,9 +16,9 @@ public class LC210_CourseSchedule2 {
         for(int i = 0; i < numCourses; i++)
             graph[i] = new ArrayList<Integer>();
 
-        for(int i = 0; i < prerequisites.length; i++){
-            degree[prerequisites[i][0]]++; // degree[被指向的课 = 想修的课 = 高阶课]
-            graph[prerequisites[i][1]].add(prerequisites[i][0]); // graph[pre][高阶课]
+        for (int[] prerequisite : prerequisites) {
+            degree[prerequisite[0]]++; // degree[被指向的课 = 想修的课 = 高阶课]
+            graph[prerequisite[1]].add(prerequisite[0]); // graph[pre][高阶课]
         }
 
         Queue<Integer> visit = new LinkedList<Integer>();
