@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC279_PerfectSquares {
+    // 转化为n到0的最短路径
     public int numSquares(int n) {
         if (n <= 0) return 0;
         int count = 0;
