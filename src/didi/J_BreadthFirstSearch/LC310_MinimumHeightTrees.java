@@ -22,25 +22,33 @@ public class LC310_MinimumHeightTrees {
             map.get(edge[1]).add(edge[0]);
         }
 
+        boolean[] visited = new boolean[n];
         Queue<Integer> q = new LinkedList<>();
 
         for (int i = 0; i < n; i++) {
-            if (deg[i] == 1) q.offer(i);
+            if (deg[i] == 1) {
+                q.offer(i);
+                visited[i] = true;
+            }
         }
 
         while (!q.isEmpty()) {
-            res = new ArrayList<>();
+            if (n <= 2) break;
             int size = q.size();
             for (int i = 0; i < size; i++) {
                 int curr = q.poll();
-                res.add(curr);
+                n--;
                 for (Integer parent : map.get(curr)) {
-                    deg[parent]--;
-                    if (deg[parent] == 1) q.offer(parent);
+                    if (visited[parent]) continue;
+                    if (--deg[parent] == 1) {
+                        q.offer(parent);
+                        visited[parent] = true;
+                    }
                 }
             }
         }
 
+        while (!q.isEmpty()) res.add(q.poll());
         return res;
     }
 }
