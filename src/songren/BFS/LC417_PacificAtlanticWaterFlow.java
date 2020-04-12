@@ -23,14 +23,14 @@ public class LC417_PacificAtlanticWaterFlow {
 
         // the first row --> Pacific
         // last rows --> Atlantic
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < cols; i++) {
             dfs(matrix, Pacific, Integer.MIN_VALUE, 0, i);
             dfs(matrix, Atlantic, Integer.MIN_VALUE, rows - 1, i);
         }
 
         // the first column --> Pacific
         // the last column --> Atlantic
-        for (int i = 0; i < cols; i++) {
+        for (int i = 0; i < rows; i++) {
             dfs(matrix, Pacific, Integer.MIN_VALUE, i, 0);
             dfs(matrix, Atlantic, Integer.MIN_VALUE, i, cols - 1);
         }
@@ -39,8 +39,7 @@ public class LC417_PacificAtlanticWaterFlow {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 if (Pacific[i][j] && Atlantic[i][j]) {
-                    List<Integer> tmp = new ArrayList<>();
-                    tmp.addAll(Arrays.asList(i, j));
+                    List<Integer> tmp = new ArrayList<>(Arrays.asList(i, j));
                     res.add(tmp);
                 }
             }
