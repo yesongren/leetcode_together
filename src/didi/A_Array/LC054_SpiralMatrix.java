@@ -1,6 +1,9 @@
-package didi.array;
+package src.didi.A_Array;
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class LC054_SpiralMatrix {
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<>();
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return result;
