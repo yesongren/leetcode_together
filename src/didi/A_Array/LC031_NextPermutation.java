@@ -1,7 +1,10 @@
-package didi.array;
+package src.didi.A_Array;
 
-class Solution {
+import java.util.Arrays;
+
+class LC031_NextPermutation {
     public void nextPermutation(int[] nums) {
+        // 寻找下一个大的数
         if (nums == null || nums.length == 0) return;
         int idx = nums.length - 1;
         int right = nums.length - 2;
