@@ -1,6 +1,6 @@
-package didi.array;
+package src.didi.A_Array;
 
-class Solution {
+class LC066_PlusOne {
     public int[] plusOne(int[] digits) {
         if(digits == null || digits.length == 0) return digits;
 
@@ -18,6 +18,7 @@ class Solution {
 
         int[] res = new int[n + 1];
         res[0] = 1;
+
         return res;
     }
 }
