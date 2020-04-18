@@ -1,6 +1,6 @@
-package didi.array;
+package src.didi.A_Array;
 
-class Solution {
+class LC059_SpiralMatrix2 {
     public int[][] generateMatrix(int n) {
         int[][] matrix = new int[n][n];
 
