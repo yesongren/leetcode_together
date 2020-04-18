@@ -1,6 +1,11 @@
-package didi.bitmanipulation;
+package src.didi.O_BitManipulation;
 
-class Solution {
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+class LC187_RepeatedDNASequences {
     public List<String> findRepeatedDnaSequences(String s) {
         Set<String> one = new HashSet<>();
         Set<String> two = new HashSet<>();
