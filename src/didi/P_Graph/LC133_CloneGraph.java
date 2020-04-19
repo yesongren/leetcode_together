@@ -12,6 +12,7 @@ public class LC133_CloneGraph {
         q.offer(node);
         map.put(node, null);
 
+        // create node for new node
         while (!q.isEmpty()) {
             Node curr = q.poll();
             Node newCurr = new Node(curr.val);
@@ -24,6 +25,7 @@ public class LC133_CloneGraph {
             }
         }
 
+        // each nei copy and link them
         for (Node n : map.keySet()) {
             Node copy = map.get(n);
             for (Node nei : n.neighbors) {
