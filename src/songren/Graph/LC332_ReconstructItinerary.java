@@ -18,17 +18,16 @@ public class LC332_ReconstructItinerary {
             nbr.add(pair.get(1));
         }
 
-        visit(graph, "JFK", ans);
+        visit(graph, ans);
         return ans;
     }
 
-    private void visit(Map<String, PriorityQueue<String>> graph, String src, List<String> ans) {
+    private void visit(Map<String, PriorityQueue<String>> graph, List<String> ans) {
         Stack<String> stack = new Stack<>();
-        stack.push(src);
+        stack.push("JFK");
         while (!stack.isEmpty()) {
             PriorityQueue<String> nbr;
-            while ((nbr = graph.get(stack.peek())) != null &&
-                    nbr.size() > 0) {
+            while ((nbr = graph.get(stack.peek())) != null && nbr.size() > 0) {
                 stack.push(nbr.poll());
             }
             ans.add(0, stack.pop());
