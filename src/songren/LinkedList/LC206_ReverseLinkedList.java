@@ -5,7 +5,7 @@ package songren.LinkedList;
  * 206. Reverse Linked List
  */
 public class LC206_ReverseLinkedList {
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseListIter(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
 
@@ -16,5 +16,13 @@ public class LC206_ReverseLinkedList {
             cur = next;
         }
         return pre;
+    }
+
+    public ListNode reverseListRec(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode last = reverseListRec(head.next);
+        head.next.next = head;
+        head.next = null;
+        return last;
     }
 }
