@@ -1,7 +1,7 @@
 package src.didi.B_DynamicProgramming;
 
-class Solution {
-    public int LC062_UniquePaths(int m, int n) {
+class LC062_UniquePaths {
+    public int uniquePaths(int m, int n) {
         if(m == 0||n == 0) return 0;
         if(m == 1||n == 1) return 1;
         int[][] dp = new int[n][m];
