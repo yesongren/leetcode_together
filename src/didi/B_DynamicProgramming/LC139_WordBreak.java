@@ -1,6 +1,9 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+import java.util.HashSet;
+import java.util.List;
+
+class LC139_WordBreak {
     public boolean wordBreak(String s, List<String> wordDict) {
         boolean[] dp = new boolean[s.length() + 1];
         HashSet<String> dict = new HashSet<>(wordDict);
