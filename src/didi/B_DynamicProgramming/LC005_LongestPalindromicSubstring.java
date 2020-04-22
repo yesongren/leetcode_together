@@ -1,10 +1,10 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+class LC005_LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
 
-        int left = 0, right = 0, len = 0;
+        int left = 0, right = 0, len;
 
         for (int i = 0; i < s.length(); i++){
             int len1 = expandFromMiddle(s, i, i);
