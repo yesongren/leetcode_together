@@ -1,6 +1,6 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+class LC121_BestTimetoBuyandSellStock {
     public int maxProfit(int[] prices) {
         int min = Integer.MAX_VALUE;
         int res = 0;
