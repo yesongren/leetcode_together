@@ -1,6 +1,6 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+class LC053_MaximumSubarray {
     // Brute Force
     public int maxSubArray1(int[] nums) {
         int max = Integer.MIN_VALUE;
