@@ -1,10 +1,9 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+class LC063_UniquePaths2 {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m = obstacleGrid[0].length;
         int n = obstacleGrid.length;
-        if(obstacleGrid.length == 0) return 0;
         int[][] dp = new int[n][m];
         for (int i = 0; i < m; i++){
             if (obstacleGrid[0][i] == 1){
