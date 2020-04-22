@@ -1,6 +1,6 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+class LC091_DecodeWays {
     public int numDecodings(String s) {
         if (s.length() == 1) return num(s,0,1);
 
