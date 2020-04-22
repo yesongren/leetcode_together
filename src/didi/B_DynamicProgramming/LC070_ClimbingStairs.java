@@ -1,6 +1,6 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+class LC070_ClimbingStairs {
     public int climbStairs(int n) {
         int[] dp = new int[n + 1];
         dp[0] = 1;
