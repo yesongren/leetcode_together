@@ -1,6 +1,6 @@
-package didi.dp;
+package src.didi.B_DynamicProgramming;
 
-class Solution {
+class LC064_MinimumPathSum {
     public int minPathSum(int[][] grid) {
         if(grid == null || grid.length == 0) return 0;
         int row = grid.length;
@@ -10,8 +10,8 @@ class Solution {
             for (int j = 0; j < col; j++){
                 dp[i][j] += grid[i][j];
                 if (i > 0 && j > 0) dp[i][j] += Math.min(dp[i-1][j],dp[i][j-1]);
-                else if (i > 0 && j == 0) dp[i][j] += dp[i-1][j];
-                else if (j > 0 && i == 0) dp[i][j] += dp[i][j-1];
+                else if (i > 0) dp[i][j] += dp[i-1][j];
+                else if (j > 0) dp[i][j] += dp[i][j-1];
             }
         }
         return dp[row-1][col-1];
