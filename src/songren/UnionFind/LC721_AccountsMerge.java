@@ -4,14 +4,14 @@ import java.util.*;
 
 /**
  * Created by yesongren on 2020/4/23
- * 1202. Smallest String With Swaps
+ * 721. Accounts Merge
  */
 class Node {
     Node parent;
     String name;
     String email;
 }
-public class LC1202_SmallestStringWithSwaps {
+public class LC721_AccountsMerge {
 
     private Map<String, Node> map = new HashMap<>();
 
