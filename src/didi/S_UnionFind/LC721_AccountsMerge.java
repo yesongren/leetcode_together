@@ -15,7 +15,6 @@ public class LC721_AccountsMerge {
                 father[i] = i;
             }
         }
-
         public void union(int a, int b) {
             father[find(a)] = father[find(b)];
         }
