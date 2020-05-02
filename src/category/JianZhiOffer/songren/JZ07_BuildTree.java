@@ -1,8 +1,8 @@
-package category.JIanZhiOffer.songren;
+package category.JianZhiOffer.songren;
 
 /**
  * Created by yesongren on 2020/5/2
  * 面试题07. 重建二叉树
  */
-public class JZ07_buildTree {
+public class JZ07_BuildTree {
 }
