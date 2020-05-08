@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class JZ32_LevelOrder {
+public class JZ32_1_LevelOrder {
     public int[] levelOrder(TreeNode root) {
         if (root == null) return new int[0];
 
