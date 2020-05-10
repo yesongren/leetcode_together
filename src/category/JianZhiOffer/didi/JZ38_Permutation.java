@@ -41,12 +41,12 @@ public class JZ38_Permutation {
     }
 
     public void backTrack(char[] arr, StringBuilder str, boolean[] visited, List<String> res){
-        if(str.length() == arr.length){
+        if (str.length() == arr.length) {
             res.add(str.toString());
             return;
         }
-        for(int i = 0;i < arr.length;i++){
-            if(!visited[i]){
+        for (int i = 0;i < arr.length;i++) {
+            if (!visited[i]) {
                 if(i > 0 && arr[i] == arr[i-1] && visited[i - 1]) continue;
                 str.append(arr[i]);
                 visited[i] = true;
