@@ -22,7 +22,7 @@ public class JZ43_ContDigitOnce {
         if (high == 1) {
             return arr[s.length()-1] + last + 1 + f(last);
         } else {
-            return pow + high*arr[s.length()-1] + f(last);
+            return pow + high * arr[s.length()-1] + f(last);
         }
     }
 }
