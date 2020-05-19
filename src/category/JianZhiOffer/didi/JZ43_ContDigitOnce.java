@@ -20,11 +20,9 @@ public class JZ43_ContDigitOnce {
         int pow = (int) Math.pow(10, s.length()-1);
         int last = n - high*pow;
         if (high == 1) {
-            int res = arr[s.length()-1] + last + 1 + f(last);
-            return res;
+            return arr[s.length()-1] + last + 1 + f(last);
         } else {
-            int res = pow + high*arr[s.length()-1] + f(last);
-            return res;
+            return pow + high*arr[s.length()-1] + f(last);
         }
     }
 }
