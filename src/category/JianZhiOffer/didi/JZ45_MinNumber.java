@@ -8,7 +8,7 @@ public class JZ45_MinNumber {
         String[] sNums = new String[len];
         for (int i = 0; i < len; i++)
             sNums[i] = String.valueOf(nums[i]);
-        PriorityQueue<String> pq = new PriorityQueue<>((s1, s2) -> (s1 + s2).compareTo(s2 + s1));
+        PriorityQueue<String> pq = new PriorityQueue<>((s1, s2) -> (s1 + s2).compareTo(s2 + s1)); //默认最小堆
         for (int i = 0; i < len; i++)
             pq.offer(sNums[i]);
         StringBuilder sb = new StringBuilder();
