@@ -2,7 +2,7 @@ package src.category.JianZhiOffer.didi;
 
 import java.util.HashSet;
 
-public class JZ57_TwoSum {
+public class JZ57_1_TwoSum {
     public int[] twoSum(int[] nums, int target) {
         HashSet<Integer> set = new HashSet<>();
         int[] result = new int[2];
