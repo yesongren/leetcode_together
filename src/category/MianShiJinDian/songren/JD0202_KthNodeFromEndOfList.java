@@ -2,7 +2,7 @@ package category.MianShiJinDian.songren;
 
 /**
  * Created by yesongren on 2020/6/20
- * 返回倒数第 k 个节点
+ * 面试题 02.02. 返回倒数第 k 个节点
  */
 public class JD0202_KthNodeFromEndOfList {
     public int kthToLast(ListNode head, int k) {
